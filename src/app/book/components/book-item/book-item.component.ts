@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Book } from '../../models/book';
+import { BookService } from '../../service/book.service';
 
 @Component({
   selector: 'app-book-item',
@@ -6,10 +8,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./book-item.component.scss']
 })
 export class BookItemComponent implements OnInit {
+  @Input() book : Book | undefined;
+  @Output() editEmitter = new EventEmitter<Book>();
+  @Output() deleteEmitter = new EventEmitter<Book>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  edit() {
+    // this.editEmitter.emit({id : this.book?.id});
+    this.editEmitter.emit(this.book);
+  }
+
+  delete() {
+    this.deleteEmitter.emit(this.book);
+  }
 }
+function id(id: any) {
+  throw new Error('Function not implemented.');
+}
+

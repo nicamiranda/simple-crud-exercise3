@@ -1,1 +1,11 @@
-<p>book-list works!</p>
+<!-- <div class = "head"> -->
+<h1><b>Best Book Series of all Time!</b></h1>
+<!-- </div> -->
+    
+<div class = "bookinstance" *ngFor = "let data of books">
+    <app-book-item
+    [book] = "data"
+    (editEmitter) = "executeEdit($event)"
+    (deleteEmitter) = "executeDelete($event)">
+    </app-book-item>
+</div>

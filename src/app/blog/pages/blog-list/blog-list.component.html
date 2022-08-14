@@ -1,1 +1,7 @@
-<p>blog-list works!</p>
+<!-- <div class = "head"> -->
+<h1><b>Top Book Blogs of 2022!</b></h1>
+<!-- </div> -->
+
+<div class = "instance" *ngFor = "let data of blogs">
+    <app-blog-item [blog] = "data"></app-blog-item>
+</div>

@@ -9,7 +9,6 @@ import { Blog } from '../../models/blog';
 })
 export class BlogListComponent implements OnInit { 
   blogs: Blog[] = [];
-  columnsToDisplay = ['id', 'title'];
 
   constructor(private blogService: BlogService ) {
     this.blogs = this.blogService.getBlogDetails();

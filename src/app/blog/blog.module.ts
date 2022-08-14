@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BlogListComponent } from './pages/blog-list/blog-list.component';
 import { BlogItemComponent } from './components/blog-item/blog-item.component';
+import { BlogRoutingModule } from './blog-routing.module';
+
+import {MatCardModule} from '@angular/material/card';
 
 
 
@@ -11,7 +14,10 @@ import { BlogItemComponent } from './components/blog-item/blog-item.component';
     BlogItemComponent
   ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    BlogRoutingModule,
+    MatCardModule
+  ],
+  exports: [BlogListComponent]
 })
 export class BlogModule { }
