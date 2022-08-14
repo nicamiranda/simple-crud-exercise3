@@ -1,3 +1,5 @@
+@import url("https://use.fontawesome.com/releases/v5.2.0/css/all.css");
+
 $primary-color: #fff;
 
 .bookcard {
@@ -61,6 +63,11 @@ img {
    }
 }
 
+.actionbutton:hover {
+    background-color: black;
+    color:#fc9400;
+  }
+
 .delbutton {
     background-color: #fff0f5;
     border: 1px solid black;
@@ -68,24 +75,22 @@ img {
     position: absolute;
     padding: 5px 10px;
     cursor: pointer;
+    a {
+    color: #fc9400;
+    display: inline-block;
+    position: relative;
+    &:after {
+      content: "\f014";
+      font-family: FontAwesome;
+      margin-left: -10px;
+      opacity: 0;
+      vertical-align: middle;
+      transition: margin .3s, opacity .3s;
+    }
+
+    &:hover:after {
+      margin-left: 5px;
+      opacity: 1;
+    }
+  }
 }
-
-// a {
-//     color: $color_prime;
-//     display: inline-block;
-//     position: relative;
-//     &:after {
-//       content: "\f061";
-//       font-family: FontAwesome;
-//       margin-left: -10px;
-//       opacity: 0;
-//       vertical-align: middle;
-//       transition: margin .3s, opacity .3s;
-//     }
-
-//     &:hover:after {
-//       margin-left: 5px;
-//       opacity: 1;
-//     }
-//   }
-// }

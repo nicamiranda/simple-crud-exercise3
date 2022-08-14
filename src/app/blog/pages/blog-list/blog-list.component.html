@@ -3,5 +3,8 @@
 <!-- </div> -->
 
 <div class = "instance" *ngFor = "let data of blogs">
-    <app-blog-item [blog] = "data"></app-blog-item>
+    <app-blog-item [blog] = "data"
+    (editEmitter) = "executeEdit($event)"
+    (deleteEmitter) = "executeDelete($event)">
+    </app-blog-item>
 </div>

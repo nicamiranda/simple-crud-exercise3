@@ -18,4 +18,13 @@ export class BlogListComponent implements OnInit {
     
   }
 
+  executeEdit(blog:Blog) {
+    console.log(blog.id);
+  }
+
+  executeDelete(blog:Blog) {
+    console.log(blog.id);
+  }
+
+
 }

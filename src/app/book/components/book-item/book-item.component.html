@@ -1,4 +1,3 @@
-
 <mat-card class="bookcard">
     <img mat-card-image src={{book?.img}} height = "250" >
     <div class = "container__text">
@@ -26,6 +25,6 @@
         <button (click)="edit()" class="actionbutton editbutton" mat-button>EDIT<i class="fa fa-arrow-right"></i></button>
     </mat-card-actions>
 </div>
-<mat-card-actions><button (click)="delete()" class ="delbutton" mat-button>DELETE</button></mat-card-actions>
+<mat-card-actions><button (click)="delete()" class ="delbutton" mat-button><a>DELETE</a></button></mat-card-actions>
 
 </mat-card>

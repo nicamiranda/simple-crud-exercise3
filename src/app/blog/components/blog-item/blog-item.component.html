@@ -7,7 +7,7 @@
           <p><i>Comments:</i> {{blog?.comments}}</p>
         </mat-card-content>
     <mat-card-actions>
-        <button class="actionbutton editbutton" mat-button>EDIT</button>
-        <button class ="actionbutton delbutton" mat-button>DELETE</button>
+        <button (click)="edit()" class="actionbutton editbutton" mat-button>EDIT</button>
+        <button (click)="delete()" class ="actionbutton delbutton" mat-button>DELETE</button>
     </mat-card-actions>
 </mat-card>

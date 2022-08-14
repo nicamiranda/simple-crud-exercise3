@@ -18,15 +18,11 @@ export class BookItemComponent implements OnInit {
   }
 
   edit() {
-    // this.editEmitter.emit({id : this.book?.id});
     this.editEmitter.emit(this.book);
   }
 
   delete() {
     this.deleteEmitter.emit(this.book);
   }
-}
-function id(id: any) {
-  throw new Error('Function not implemented.');
 }
 

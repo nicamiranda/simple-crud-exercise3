@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Blog } from '../../models/blog';
 
 @Component({
@@ -8,10 +8,20 @@ import { Blog } from '../../models/blog';
 })
 export class BlogItemComponent implements OnInit {
   @Input() blog : Blog | undefined;
+  @Output() editEmitter = new EventEmitter<Blog>();
+  @Output() deleteEmitter = new EventEmitter<Blog>();
 
   constructor() { }
 
   ngOnInit():void {
   }
-  
+
+  edit() {
+    this.editEmitter.emit(this.blog);
+  }
+
+  delete() {
+    this.deleteEmitter.emit(this.blog);
+  }
 }
+
