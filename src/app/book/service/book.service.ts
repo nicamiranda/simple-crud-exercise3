@@ -5,6 +5,9 @@ import { Book } from '../models/book';
   providedIn: 'root'
 })
 export class BookService {
+  deleteAll() {
+    throw new Error('Method not implemented.');
+  }
 
   books: Book[] = [
     {

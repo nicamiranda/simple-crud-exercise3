@@ -1,0 +1,31 @@
+<form [formGroup] = "bookForm">
+    Value: {{ bookForm.value | json }}
+    <mat-form-field class="form-group">
+        <mat-label for name="name">Name of the Book:</mat-label>
+        <input matInput formControlName ="name" placeholder="name" class ="form-control">
+    </mat-form-field>
+    <ng-container formArrayName="authors">
+        <mat-label for="authors">Authors</mat-label>
+        <div class="example-full-width" appearance="fill" *ngFor="let _ of authorsFormArray.controls; index as i">
+            <input matInput formControlName="i" class="form-control">
+            <button (click)="deleteAuthor(i)" class="btn btn-danger">Delete Author</button>
+        </div>
+            <button type="button" class="btn btn-info" (click)="addAuthor()">Add Author</button>
+    </ng-container>
+    <mat-form-field class="form-group">
+        <mat-label for name="isbn">ISBN-10:</mat-label>
+        <input matInput formControlName ="isbn" placeholder="isbn" class ="form-control">
+    </mat-form-field>
+    <button type="submit" class="btn btn-success" >Submit</button>
+</form>
+
+<!-- <form  [formGroup] = "bookForm">
+    <ng-container formArrayName="authors">
+        <mat-label for="authors">Authors</mat-label>
+        <div class="input-group mb-3" *ngFor="let _ of authorsFormArray.controls; index as i">
+            <input matInput formControlName="i" class="form-control">
+            <button (click)="deleteAuthor(i)" class="btn btn-danger">Delete Author</button>
+        </div>
+            <button type="button" class="btn btn-info" (click)="addAuthor()">Add Author</button>
+</ng-container>
+</form> -->

@@ -1,2 +1,6 @@
-export interface User {
+export interface Profile {
+    name: string;
+      email: string;
+      bio: string;
+      active: string;
 }

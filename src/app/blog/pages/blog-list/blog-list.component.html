@@ -1,7 +1,7 @@
 <!-- <div class = "head"> -->
-<h1><b>Top Book Blogs of 2022!</b></h1>
+<app-command-bar [componentTitle] = "'Top Book Blogs of 2022!'"></app-command-bar>
 <!-- </div> -->
-
+<!-- <app-command-bar [componentTitle]="'Top Book Blogs of 2022!'"></app-command-bar> -->
 <div class = "instance" *ngFor = "let data of blogs">
     <app-blog-item [blog] = "data"
     (editEmitter) = "executeEdit($event)"

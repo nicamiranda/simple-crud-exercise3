@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <body>
 
@@ -18,4 +18,27 @@
 </form> 
 
 </body>
-</html>
+</html> -->
+
+<form [formGroup] = "profileForm">
+  Value: {{ profileForm.value | json }}
+
+  <div class="form-group">
+      <label for name="name">Name:</label>
+      <input formControlName ="name" type ="text" id ="name" class ="form-control">
+  </div>
+  <div class="form-group">
+      <label for="email">Email:</label><br>
+      <input formControlName ="email" type="text" id="email" name="email" class ="form-control"><br><br>
+  </div>
+  <div class="form-group">
+      <label for="bio">Bio:</label><br>
+      <input formControlName ="bio" type="text" id="bio" name="bio" class ="form-control"><br><br>
+  </div>
+  <div class="form-group">
+      <input formControlName ="active" type="checkbox" id="active" name="active" value="Active" class ="form-control">
+      <label for="active">Active</label><br>
+  </div>
+
+  <button type="submit" class="btn btn-success" >Submit</button>
+</form> 

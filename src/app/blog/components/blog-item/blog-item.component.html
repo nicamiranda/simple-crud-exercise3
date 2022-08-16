@@ -7,7 +7,9 @@
           <p><i>Comments:</i> {{blog?.comments}}</p>
         </mat-card-content>
     <mat-card-actions>
+        <a href routerLink="/blog/form">
         <button (click)="edit()" class="actionbutton editbutton" mat-button>EDIT</button>
+        </a>
         <button (click)="delete()" class ="actionbutton delbutton" mat-button>DELETE</button>
     </mat-card-actions>
 </mat-card>

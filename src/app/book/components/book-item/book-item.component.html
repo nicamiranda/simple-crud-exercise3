@@ -22,9 +22,9 @@
         </mat-card-content>
     
     <mat-card-actions>
-        <button (click)="edit()" class="actionbutton editbutton" mat-button>EDIT<i class="fa fa-arrow-right"></i></button>
+        <button routerLink="/book/form" (click)="edit()" class="actionbutton editbutton" mat-button>EDIT<i class="fa fa-arrow-right"></i></button>
     </mat-card-actions>
 </div>
 <mat-card-actions><button (click)="delete()" class ="delbutton" mat-button><a>DELETE</a></button></mat-card-actions>
-
+<router-outlet></router-outlet>
 </mat-card>
