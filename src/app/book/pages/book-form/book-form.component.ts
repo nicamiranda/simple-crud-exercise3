@@ -29,7 +29,7 @@ export class BookFormComponent implements OnInit , AfterViewInit{
     this.bookForm.valueChanges.subscribe((data) => {
       console.log(data);
       // (this.bookForm.get('name') as FormControl).setValue(this.books);
-      this.bookForm.patchValue(this.books);
+      // this.bookForm.patchValue(this.books);
   })
  }
 
@@ -46,12 +46,9 @@ deleteAuthor(i: number) {
 //   console.log(this.bookForm.value);
 // }
 
- ngAfterViewInit(): void {
-  const bookform = this.bookForm.patchValue(this.books);
- }
+ ngAfterViewInit(): void {}
 
  submit() {
-  const bookForm = this.bookForm.patchValue(this.books)
   console.log(this.bookForm.value);
 }
 }
