@@ -1,22 +1,49 @@
 <form [formGroup] = "bookForm">
     Value: {{ bookForm.value | json }}
-    <mat-form-field class="form-group">
-        <mat-label for name="name">Name of the Book:</mat-label>
-        <input matInput formControlName ="name" placeholder="name" class ="form-control">
-    </mat-form-field>
-    <ng-container formArrayName="authors">
+    <mat-card class="bookform">
+        <mat-card-header>
+            <mat-card-title>Edit Book Item</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field class="form-group">
+                <input matInput formControlName ="name" placeholder="Name of the Book:" class ="form-control">
+            </mat-form-field>
+
+            <ng-container formArrayName="authors">
+                <ng-container *ngFor="let _ of authorsFormArray.controls; let i = index">
+                        <mat-form-field appearance="fill">
+                            <input matInput
+                                   formControlName="i"
+                                   class ="form-control"
+                                   placeholder="Author">
+                        </mat-form-field>
+                        <mat-icon class="delete-btn" (click)="deleteAuthor(i)">
+                            delete_forever</mat-icon>
+                </ng-container>
+            </ng-container>
+            <button mat-mini-fab (click)="addAuthor()"> 
+                <mat-icon class="add-course-btn">add</mat-icon>
+            </button>
+
+        <!-- <ng-container formArrayName="authors">
         <mat-label for="authors">Authors</mat-label>
         <div class="example-full-width" appearance="fill" *ngFor="let _ of authorsFormArray.controls; index as i">
             <input matInput formControlName="i" class="form-control">
             <button (click)="deleteAuthor(i)" class="btn btn-danger">Delete Author</button>
         </div>
             <button type="button" class="btn btn-info" (click)="addAuthor()">Add Author</button>
-    </ng-container>
-    <mat-form-field class="form-group">
-        <mat-label for name="isbn">ISBN-10:</mat-label>
-        <input matInput formControlName ="isbn" placeholder="isbn" class ="form-control">
-    </mat-form-field>
-    <button type="submit" class="btn btn-success" >Submit</button>
+        </ng-container> -->
+
+        <mat-form-field class="form-group">
+        <input matInput formControlName ="isbn" placeholder="ISBN-10:" class ="form-control">
+        </mat-form-field>
+
+        <mat-card-actions>
+        <button type="submit" class="button" ><a>Submit</a></button>
+        </mat-card-actions>
+
+    </mat-card-content>
+    </mat-card>
 </form>
 
 <!-- <form  [formGroup] = "bookForm">

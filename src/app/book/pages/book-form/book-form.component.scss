@@ -1,5 +1,41 @@
-.form-group{
-    display: block;
-    width: 25%;
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.bookform {
+    width: 25rem;
+    height: 20rem;
+    margin: 10px 20px;
 }
 
+.form-group{
+    display: block;
+    width: 100%;
+}
+
+.button {
+    background-color: #fff0f5;
+    border: 1px solid black;
+    border-radius: 2px;
+    position: absolute;
+    padding: 5px 10px;
+    cursor: pointer;
+    a {
+    color: #fc9400;
+    display: inline-block;
+    position: relative;
+    &:after {
+      content: "\f014";
+      font-family: FontAwesome;
+      margin-left: -10px;
+      opacity: 0;
+      vertical-align: middle;
+      transition: margin .3s, opacity .3s;
+    }
+
+    &:hover:after {
+      margin-left: 5px;
+      opacity: 1;
+    }
+  }
+}

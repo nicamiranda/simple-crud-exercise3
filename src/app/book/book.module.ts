@@ -12,6 +12,7 @@ import { SharedModule } from '../shared/shared.module';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { MatInputModule } from '@angular/material/input';
     FormsModule,
     SharedModule,
     MatInputModule,
+    MatIconModule
   ],
   exports: [BookListComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
