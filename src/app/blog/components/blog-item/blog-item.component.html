@@ -1,15 +1,13 @@
 <mat-card class="card">
     <mat-card-title>{{blog?.id}}. {{blog?.title}}</mat-card-title>
         <mat-card-subtitle>Author: {{blog?.author}}</mat-card-subtitle>
-        <img mat-card-image src="http://cchunterbooks.com/blog/wp-content/uploads/2016/02/BookREviews.jpg" height = "250">
+        <img mat-card-image src={{blog?.img}} height = "250">
         <mat-card-content>
           <p><i>Description:</i> {{blog?.description}}</p>
           <p><i>Comments:</i> {{blog?.comments}}</p>
         </mat-card-content>
     <mat-card-actions>
-        <a href routerLink="/blog/form">
-        <button (click)="edit()" class="actionbutton editbutton" mat-button>EDIT</button>
-        </a>
+        <button routerLink="/blog/form" (click)="edit()" class="actionbutton editbutton" mat-button>EDIT</button>
         <button (click)="delete()" class ="actionbutton delbutton" mat-button>DELETE</button>
     </mat-card-actions>
 </mat-card>

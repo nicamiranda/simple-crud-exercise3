@@ -3,12 +3,21 @@ import { RouterModule, Routes } from '@angular/router';
 import { BlogFormComponent } from './blog/pages/blog-form/blog-form.component';
 import { BlogListComponent } from './blog/pages/blog-list/blog-list.component';
 import { BookFormComponent } from './book/pages/book-form/book-form.component';
+import { RegisterComponent } from './login/register/register.component';
 
 const routes: Routes = [
   {
     path: "",
-    redirectTo: "blog",
+    redirectTo: "login",
     pathMatch: "full"
+  },
+  {
+    path: "login",
+    loadChildren: () => import("./login/login.module").then(m => m.LoginModule)
+  },
+  {
+    path: "register",
+    component: RegisterComponent
   },
   {
     path: "blog",
@@ -20,7 +29,7 @@ const routes: Routes = [
   },
   {
     path: "book",
-    loadChildren: () => import("./book/book.module").then(m => m.BookModule),
+    loadChildren: () => import("./book/book.module").then(m => m.BookModule)
   },
   {
     path: "book/form",

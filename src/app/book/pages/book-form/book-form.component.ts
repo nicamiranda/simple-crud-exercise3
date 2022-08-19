@@ -14,7 +14,6 @@ export class BookFormComponent implements OnInit , AfterViewInit{
   books: Book[] = [];
   
   constructor(private bf: FormBuilder, private bookService: BookService) { 
-    this.books = this.bookService.getBlogDetails();
 
     this.bookForm = this.bf.group ({
       name: [""],
@@ -28,8 +27,6 @@ export class BookFormComponent implements OnInit , AfterViewInit{
   ngOnInit(): void {
     this.bookForm.valueChanges.subscribe((data) => {
       console.log(data);
-      // (this.bookForm.get('name') as FormControl).setValue(this.books);
-      // this.bookForm.patchValue(this.books);
   })
  }
 
@@ -42,13 +39,9 @@ deleteAuthor(i: number) {
   this.authorsFormArray.removeAt(i);
 }
 
-// submit() {
-//   console.log(this.bookForm.value);
-// }
-
  ngAfterViewInit(): void {}
 
- submit() {
+ submitBook() {
   console.log(this.bookForm.value);
 }
 }

@@ -1,0 +1,96 @@
+{
+    "books" :  [
+        {
+            "id": 1,
+            "name": "The Twilight Saga",
+            "authors": ["Stephenie Meyer"],
+            "isbn": "0316327336",
+            "img": "https://images-na.ssl-images-amazon.com/images/I/514GTlyo5qL._SY498_BO1,204,203,200_.jpg"
+        },
+        {
+            "id": 2,
+            "name": "A Song of Fire and Ice",
+            "authors": ["George R. R. Martin", " Linda Antonsson", " Elio Garcia"],
+            "isbn": "0553805444",
+            "img": "https://www.booktopia.com.au/blog/wp-content/uploads/2017/01/GOT-books.jpg"
+        },
+        {
+            "id": 3,
+            "name": "The Hunger Games",
+            "authors": ["Suzanne Collins"],
+            "isbn": "054579191X",
+            "img": "http://4.bp.blogspot.com/-pkVYb-OCpig/ULG87dJPyMI/AAAAAAAAAB0/E8WA0XYKJv8/s1600/asasasa.PNG"
+        },
+        {
+            "id": 4,
+            "name": "Harry Potter",
+            "authors": ["J.K. Rowling"],
+            "isbn": " 0545162076",
+            "img": "https://i.ebayimg.com/images/i/261349515319-0-1/s-l1000.jpg"
+        }
+    ],
+  
+    "blogs" : [
+        {
+            "id": 1,
+            "title": "Book Riot",
+            "description": "Book Riot is the largest independent editorial book site in North America and home to a host of media, from podcasts to newsletters to original content, all designed around diverse readers and across all genres.",
+            "author": "Riot New Media Group",
+            "comments": ["Always Books"," Never Boring"],
+            "img" : "https://yt3.ggpht.com/a/AGF-l7_K6FefBcXI1QnnP9u2rxm820VBzETmcIjfOw=s900-c-k-c0xffffffff-no-rj-mo"
+          },
+          {
+            "id": 2,
+            "title": "The Chrysalis BREW Project",
+            "description": "An Australia-based award-winning platform. This is where you would find thoughts, words, photos, videos, and other ideas in the realm of Books, Reviews, and Everything Written (BREW).",
+            "author": "Susan Frances",
+            "comments": ["Power of the Written Word"," Top Australian and Global book blog"],
+            "img" : "https://media-exp1.licdn.com/dms/image/C5622AQGfmYP8Egm4Cw/feedshare-shrink_2048_1536/0/1658692803490?e=1661990400&v=beta&t=Pj6g3ddUWcNqzmIpjG-4vSedBrsyRKJwGWzznF4b6cI"
+          },
+          {
+            "id": 3,
+            "title": "Amazon Book Review",
+            "description": "The Amazon Book Review, formerly known as Omnivoracious is a large book blog managed by four different editors. It’s updated practically every day with at least two new articles.It is one of the most comprehensive book blog out there",
+            "author": "Amazon",
+            "comments": ["Always hot off the press"," sheer variety"],
+            "img" : "https://tse4.mm.bing.net/th?id=OIP.WwJvRz4nv_BsvVFH1TOQWQHaD-&pid=Api&P=0"
+          }
+    ],
+    
+    "users" : [
+      {
+             "firstname": "admin",
+             "lastname": "test",
+             "email": "admin@gmail.com",
+             "password": "admin"
+   
+         },
+         {
+             "firstname": "Nica",
+             "lastname": "Miranda",
+             "email": "nica@gmail.com",
+             "password": "miranda"
+   
+         },
+         {
+             "firstname": "John",
+             "lastname": "Doe",
+             "email": "john@gmail.com",
+             "password": "johndoe"
+         },
+         {
+             "firstname": "Jane",
+             "lastname": "Doe",
+             "email": "jane@gmail.com",
+             "password": "janedoe"
+         },
+         {
+             "firstname": "Juan",
+             "lastname": "Dela Cruz",
+             "email": "juan@gmail.com",
+             "password": "1234567"
+         }
+     ]
+  
+  
+  }

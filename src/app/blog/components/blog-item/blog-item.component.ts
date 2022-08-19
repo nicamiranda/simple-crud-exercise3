@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Blog } from '../../models/blog';
+import { BlogService } from '../../service/blog.service';
 
 @Component({
   selector: 'app-blog-item',
